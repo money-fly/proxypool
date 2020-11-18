@@ -1,6 +1,6 @@
 # your domain
 domain: example.com
-port:             # default 443
+port:             # default 8080
 
 # database dsn(postgresql)
 # 暂不支持远程数据库，留空以启用本地数据库默认连接参数
@@ -18,9 +18,13 @@ source-files:
   # use local file
   - ./config/source.yaml
   # use web file
-#  - https://example.com/config/source.yaml
+  - https://hub.tgbot.co/proxy/webfuzz.yaml
+  - https://hub.tgbot.co/proxy/tgchannel.yaml
+  - https://hub.tgbot.co/proxy/subscribe.yaml
+  - https://hub.tgbot.co/proxy/others.yaml
+  - https://hub.tgbot.co/proxy/clash.yaml
 
 # speedtest
-speedtest: false  # default false. Warning: this will consume large net resource.
+speedtest: true  # default false. Warning: this will consume large net resource.
 connection:       # default 5.
 timeout:          # default 10 (seconds).
